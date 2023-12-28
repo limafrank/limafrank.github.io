@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Yascara</title>
+
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="req.css" rel="stylesheet">
+    </head>
+
+    <body class="text-center" style="background-color: #B6BBC4;" id="cont">
+
+        <div class="div-req" id="p1">
+            <h1 class="h1 mb-3 font-weight-bold">Clique abaixo para continuar</h1>
+            <button class="btn btn-lg btn-dark btn-block" onclick="replaceP1()">🧐</button>
+        </div>
+
+        <div class="div-req" id="p2">
+            <h1 class="h1 mb-3 font-weight-bold">Quer namorar comigo?</h1>
+            <button class="btn btn-lg btn-success btn-block" onclick="replaceP2()">Sim 🥰</button>
+            <button class="btn btn-lg btn-danger btn-block" onclick="wrong()">Não 😔</button>
+        </div>
+
+        <div class="div-req" id="p3">
+            <h1>❤️</h1>
+        </div>
+
+    </body>
+
+    <script>
+        document.getElementById("p2").style.display = "none"
+        document.getElementById("p3").style.display = "none"
+
+        function replaceP1() {
+            document.getElementById("p1").style.display = "none"
+            document.getElementById("p2").style.display = "block"
+            document.getElementById("cont").style.backgroundColor = "#F7B787"
+        }
+
+        function replaceP2() {
+            document.getElementById("p2").style.display = "none"
+            document.getElementById("p3").style.display = "block"
+            document.getElementById("cont").style.backgroundColor = "#EE7214"
+        }
+        
+        function wrong() {
+            alert("Algo deu errado, tente novamente mais tarde 😦")
+        }
+
+    </script>
+</html>
